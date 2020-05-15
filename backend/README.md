@@ -70,18 +70,7 @@ One note before you delve into your tasks: for each endpoint you are expected to
 ```
 
 
-Endpoints
-```bash
-GET '/categories'
-GET '/questions?page=<page_number>'
-GET  '/questions/categories/<category>'
-DELETE '/questions/<question_id>'
-POST '/questions/new-question'
-POST '/questions/search'
-POST '/quizzes'
-```
-
-
+##Endpoints
 
 GET '/categories'
 ```bash
