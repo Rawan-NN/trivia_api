@@ -71,7 +71,7 @@ One note before you delve into your tasks: for each endpoint you are expected to
 
 
 Endpoints
-```
+```bash
 GET '/categories'
 GET '/questions?page=<page_number>'
 GET  '/questions/categories/<category>'
@@ -84,7 +84,7 @@ POST '/quizzes'
 
 
 GET '/categories'
-```
+```bash
 - Fetches a dictionary of categories in which the keys are the ids and the value is the corresponding string of the category
 - Request Arguments: None
 - Response:
@@ -96,7 +96,7 @@ GET '/categories'
 '6' : "Sports"}
 ```
 GET '/questions?page=<page_number>'
-```
+```bash
 - Fetches a dictionary of questions in which the keys are the id,question,answer, category and the difficulty. also the number of questions, list of categories and the cuurent category
 - Request Arguments: page number optional
 - Response:
@@ -152,14 +152,14 @@ GET '/questions?page=<page_number>'
 ```
 
 DELETE '/questions/<question_id>'
-```
+```bash
 - Delete the question with the given id 
 - Request Arguments:question_id:int 
 - Response: 
 {'success': True}
 ```
 POST '/questions/new-question'
-```
+```bash
 - create new question
 - Request body:{question:string, answer:string, difficulty:int, category:string}
 - Response: 
@@ -225,7 +225,7 @@ POST '/questions/new-question'
 }
 ```
 POST '/questions/search'
-```
+```bash
 - get the questions that contains the search term
 - Request body: {searchTerm:string}
 - Response:
@@ -251,7 +251,7 @@ POST '/questions/search'
 }
 ```
 GET '/questions/categories/<category>'
-```
+```bash
 - get the questionsbased on given category
 - Request argument: category:int
 - Response:
@@ -278,7 +278,7 @@ GET '/questions/categories/<category>'
 ```
 
 POST '/quizzes'
-```
+```bash
 - To get questions to play the quiz. 
   This endpoint should take category and previous question parameters and return a random questions within the given category, if provided, and that is not one of the previous questions. 
 - Request body: {previous_questions:[], quiz_category: {id:int, type:string}}
