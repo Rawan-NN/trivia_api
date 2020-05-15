@@ -71,6 +71,7 @@ One note before you delve into your tasks: for each endpoint you are expected to
 
 
 Endpoints
+```
 GET '/categories'
 GET '/questions?page=<page_number>'
 GET  '/questions/categories/<category>'
@@ -78,11 +79,12 @@ DELETE '/questions/<question_id>'
 POST '/questions/new-question'
 POST '/questions/search'
 POST '/quizzes'
-
+```
 
 
 
 GET '/categories'
+```
 - Fetches a dictionary of categories in which the keys are the ids and the value is the corresponding string of the category
 - Request Arguments: None
 - Response:
@@ -92,8 +94,9 @@ GET '/categories'
 '4' : "History",
 '5' : "Entertainment",
 '6' : "Sports"}
- 
+```
 GET '/questions?page=<page_number>'
+```
 - Fetches a dictionary of questions in which the keys are the id,question,answer, category and the difficulty. also the number of questions, list of categories and the cuurent category
 - Request Arguments: page number optional
 - Response:
@@ -146,14 +149,17 @@ GET '/questions?page=<page_number>'
  "success": true, 
  "total_questions": 3
 }
+```
 
 DELETE '/questions/<question_id>'
+```
 - Delete the question with the given id 
 - Request Arguments:question_id:int 
 - Response: 
 {'success': True}
-
+```
 POST '/questions/new-question'
+```
 - create new question
 - Request body:{question:string, answer:string, difficulty:int, category:string}
 - Response: 
@@ -217,8 +223,9 @@ POST '/questions/new-question'
  "success": true, 
  "total_questions": 4
 }
-
+```
 POST '/questions/search'
+```
 - get the questions that contains the search term
 - Request body: {searchTerm:string}
 - Response:
@@ -242,8 +249,9 @@ POST '/questions/search'
     "success": true,
     "total_questions": 1
 }
-
+```
 GET '/questions/categories/<category>'
+```
 - get the questionsbased on given category
 - Request argument: category:int
 - Response:
@@ -267,8 +275,10 @@ GET '/questions/categories/<category>'
     "success": true,
     "total_questions": 1
 }
+```
 
 POST '/quizzes'
+```
 - To get questions to play the quiz. 
   This endpoint should take category and previous question parameters and return a random questions within the given category, if provided, and that is not one of the previous questions. 
 - Request body: {previous_questions:[], quiz_category: {id:int, type:string}}
@@ -283,8 +293,8 @@ POST '/quizzes'
     },
     "success": true
 }
-
 ```
+
 
 
 
