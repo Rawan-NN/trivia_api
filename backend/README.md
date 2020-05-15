@@ -250,10 +250,10 @@ POST '/questions/search'
     "total_questions": 1
 }
 ```
-GET '/questions/categories/<category>'
+GET '/questions/categories/<Category_id>'
 ```bash
 - get the questionsbased on given category
-- Request argument: category:int
+- Request argument: Category_id:int
 - Response:
 {
     "current_category": [
