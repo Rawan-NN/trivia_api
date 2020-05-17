@@ -83,7 +83,7 @@ POST '/quizzes'
 
 
 
-GET '/categories'
+1. GET '/categories'
 ```bash
 - Fetches a dictionary of categories in which the keys are the ids and the value is the corresponding string of the category
 - Request Arguments: None
@@ -95,7 +95,7 @@ GET '/categories'
 '5' : "Entertainment",
 '6' : "Sports"}
 ```
-GET '/questions?page=<page_number>'
+2. GET '/questions?page=<page_number>'
 ```bash
 - Fetches a dictionary of questions in which the keys are the id,question,answer, category and the difficulty. also the number of questions, list of categories and the cuurent category
 - Request Arguments: page number optional
@@ -151,14 +151,14 @@ GET '/questions?page=<page_number>'
 }
 ```
 
-DELETE '/questions/<question_id>'
+3. DELETE '/questions/<question_id>'
 ```bash
 - Delete the question with the given id 
 - Request Arguments:question_id:int 
 - Response: 
 {'success': True}
 ```
-POST '/questions/new-question'
+4. POST '/questions/new-question'
 ```bash
 - create new question
 - Request body:{question:string, answer:string, difficulty:int, category:string}
@@ -224,7 +224,7 @@ POST '/questions/new-question'
  "total_questions": 4
 }
 ```
-POST '/questions/search'
+5. POST '/questions/search'
 ```bash
 - get the questions that contains the search term
 - Request body: {searchTerm:string}
@@ -250,7 +250,7 @@ POST '/questions/search'
     "total_questions": 1
 }
 ```
-GET '/questions/categories/<Category_id>'
+6. GET '/questions/categories/<Category_id>'
 ```bash
 - get the questionsbased on given category
 - Request argument: Category_id:int
@@ -277,7 +277,7 @@ GET '/questions/categories/<Category_id>'
 }
 ```
 
-POST '/quizzes'
+7. POST '/quizzes'
 ```bash
 - To get questions to play the quiz. 
   This endpoint should take category and previous question parameters and return a random questions within the given category, if provided, and that is not one of the previous questions. 
@@ -295,6 +295,22 @@ POST '/quizzes'
 }
 ```
 
+## Error Handling
+
+- Error example:
+```bash
+{
+    "success": False,
+    "error": 404,
+    "message": "Not found"
+}
+```
+The errors that may occur:
+
+* 400 – bad Request
+* 405 – method not allowed
+* 404 – Not found
+* 422 – unprocessable
 
 
 
