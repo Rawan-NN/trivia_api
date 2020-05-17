@@ -102,8 +102,7 @@ def create_app(test_config=None):
             new_category = body.get("category", None)
             new_difficulty = body.get("difficulty", None)
     
-            if not new_question or not new_answer or not \
-               new_category or not new_difficulty:
+            if not new_question or not new_answer or not new_category or not new_difficulty:
                 abort(422)
             #  create new question and add it
             question = Question(
